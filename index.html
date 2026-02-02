@@ -9,112 +9,112 @@
 
 <style>
 :root{
---bg:#020617;
---bg2:#0b1c2d;
---text:#e5e7eb;
---card:rgba(30,41,59,0.7);
---accent:#38bdf8;
+  --bg:#020617;
+  --bg2:#0b1c2d;
+  --text:#e5e7eb;
+  --card:rgba(30,41,59,0.7);
+  --accent:#38bdf8;
 }
 
 .light{
---bg:#f8fafc;
---bg2:#e2e8f0;
---text:#020617;
---card:#ffffff;
---accent:#0284c7;
+  --bg:#f8fafc;
+  --bg2:#e2e8f0;
+  --text:#020617;
+  --card:#ffffff;
+  --accent:#0284c7;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;}
 
 body{
-background:linear-gradient(135deg,var(--bg),var(--bg2));
-color:var(--text);
-scroll-behavior:smooth;
+  background:linear-gradient(135deg,var(--bg),var(--bg2));
+  color:var(--text);
+  scroll-behavior:smooth;
 }
 
 /* AI BACKGROUND */
 
 body::before{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:
-radial-gradient(circle at 20% 20%, rgba(56,189,248,.15), transparent 40%),
-radial-gradient(circle at 80% 30%, rgba(99,102,241,.12), transparent 40%),
-radial-gradient(circle at 50% 80%, rgba(34,197,94,.10), transparent 40%),
-linear-gradient(135deg,var(--bg),var(--bg2));
-z-index:-2;
-animation:bgMove 20s linear infinite alternate;
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(56,189,248,.15), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(99,102,241,.12), transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(34,197,94,.10), transparent 40%),
+    linear-gradient(135deg,var(--bg),var(--bg2));
+  z-index:-2;
+  animation:bgMove 20s linear infinite alternate;
 }
 
 body::after{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background-image:
-linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
-linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
-background-size:40px 40px;
-z-index:-1;
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size:40px 40px;
+  z-index:-1;
 }
 
 @keyframes bgMove{
-0%{background-position:0 0,0 0,0 0;}
-100%{background-position:200px 200px,-200px 150px,150px -200px;}
+  0%{background-position:0 0,0 0,0 0;}
+  100%{background-position:200px 200px,-200px 150px,150px -200px;}
 }
 
 /* NAVBAR */
 
 nav{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(2,6,23,.85);
-backdrop-filter:blur(12px);
-display:flex;
-justify-content:center;
-gap:30px;
-padding:15px;
-z-index:999;
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(2,6,23,.85);
+  backdrop-filter:blur(12px);
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:15px;
+  z-index:999;
 }
 
 nav a{
-color:var(--text);
-text-decoration:none;
-font-weight:500;
-position:relative;
+  color:var(--text);
+  text-decoration:none;
+  font-weight:500;
+  position:relative;
 }
 
 nav a.active::after{
-content:"";
-position:absolute;
-left:0;
-bottom:-6px;
-width:100%;
-height:3px;
-background:var(--accent);
-border-radius:2px;
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:100%;
+  height:3px;
+  background:var(--accent);
+  border-radius:2px;
 }
 
 /* TOGGLE */
 
 .toggle{
-position:fixed;
-top:70px;
-right:20px;
-background:var(--accent);
-color:white;
-border:none;
-padding:10px 16px;
-border-radius:30px;
-cursor:pointer;
-z-index:999;
+  position:fixed;
+  top:70px;
+  right:20px;
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:10px 16px;
+  border-radius:30px;
+  cursor:pointer;
+  z-index:999;
 }
 
 /* SECTIONS */
@@ -122,124 +122,129 @@ z-index:999;
 section{padding:110px 10%;}
 
 h2{
-text-align:center;
-color:var(--accent);
-font-size:2.3rem;
-margin-bottom:50px;
+  text-align:center;
+  color:var(--accent);
+  font-size:2.3rem;
+  margin-bottom:50px;
 }
 
 .hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
 }
 
 .hero h1{font-size:3.5rem;}
 
 .typing{
-color:var(--accent);
-font-size:1.4rem;
-margin-top:15px;
+  color:var(--accent);
+  font-size:1.4rem;
+  margin-top:15px;
 }
 
 .btn-group{
-margin-top:35px;
-display:flex;
-gap:15px;
+  margin-top:35px;
+  display:flex;
+  gap:15px;
 }
 
 .btn{
-background:var(--accent);
-color:white;
-padding:14px 35px;
-border-radius:40px;
-text-decoration:none;
-font-weight:600;
-border:none;
-cursor:pointer;
+  background:var(--accent);
+  color:white;
+  padding:14px 35px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:600;
+  border:none;
+  cursor:pointer;
+  display:inline-block;
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
 .btn.secondary{
-background:transparent;
-border:2px solid var(--accent);
-color:var(--accent);
+  background:transparent;
+  border:2px solid var(--accent);
+  color:var(--accent);
+}
+
+.btn.secondary:hover{
+  background:var(--accent);
+  color:white;
+}
+
+.download-animate{
+  animation:pulse .6s ease;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.15);}
+  100%{transform:scale(1);}
 }
 
 /* GRID & CARDS */
 
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
 }
 
 .card{
-background:var(--card);
-backdrop-filter:blur(12px);
-padding:28px;
-border-radius:18px;
-box-shadow:0 20px 40px rgba(0,0,0,.3);
+  background:var(--card);
+  backdrop-filter:blur(12px);
+  padding:28px;
+  border-radius:18px;
+  box-shadow:0 20px 40px rgba(0,0,0,.3);
 }
 
 /* TEXT SECTIONS */
 
 .about,.education,.contact{
-max-width:950px;
-margin:auto;
-text-align:center;
-line-height:1.8;
+  max-width:950px;
+  margin:auto;
+  text-align:center;
+  line-height:1.8;
 }
 
 /* BADGES */
 
 .badges{
-margin-top:12px;
-display:flex;
-flex-wrap:wrap;
-gap:8px;
+  margin-top:12px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
 }
 
 .badge{
-background:rgba(56,189,248,.15);
-color:var(--accent);
-padding:6px 12px;
-border-radius:20px;
-font-size:.8rem;
+  background:rgba(56,189,248,.15);
+  color:var(--accent);
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:.8rem;
 }
 
 /* SOCIAL */
 
 .socials a{
-margin:0 15px;
-color:var(--accent);
-text-decoration:none;
-font-weight:500;
-}
-
-/* DOWNLOAD */
-
-.download-animate{
-animation:pulse .6s ease;
-}
-
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.15);}
-100%{transform:scale(1);}
+  margin:0 15px;
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:500;
 }
 
 footer{
-text-align:center;
-padding:30px;
-opacity:.8;
+  text-align:center;
+  padding:30px;
+  opacity:.8;
 }
 
 @media(max-width:768px){
-.hero h1{font-size:2.5rem;}
-section{padding:100px 6%;}
+  .hero h1{font-size:2.5rem;}
+  section{padding:100px 6%;}
 }
 </style>
 </head>
@@ -247,13 +252,13 @@ section{padding:100px 6%;}
 <body>
 
 <nav>
-<a href="#home" class="navlink active">Home</a>
-<a href="#about" class="navlink">About</a>
-<a href="#skills" class="navlink">Skills</a>
-<a href="#experience" class="navlink">Experience</a>
-<a href="#projects" class="navlink">Projects</a>
-<a href="#education" class="navlink">Education</a>
-<a href="#contact" class="navlink">Contact</a>
+  <a href="#home" class="navlink active">Home</a>
+  <a href="#about" class="navlink">About</a>
+  <a href="#skills" class="navlink">Skills</a>
+  <a href="#experience" class="navlink">Experience</a>
+  <a href="#projects" class="navlink">Projects</a>
+  <a href="#education" class="navlink">Education</a>
+  <a href="#contact" class="navlink">Contact</a>
 </nav>
 
 <button class="toggle" onclick="toggleTheme()">🌗 Toggle</button>
@@ -261,194 +266,192 @@ section{padding:100px 6%;}
 <!-- HERO -->
 
 <section id="home" class="hero">
-<h1>Sandhip R</h1>
-<div class="typing" id="typing"></div>
+  <h1>Sandhip R</h1>
+  <div class="typing" id="typing"></div>
 
-<div class="btn-group">
-<a href="#contact" class="btn">Contact Me</a>
-<a href="sandhipresume.pdf" class="btn secondary" download>Download Resume</a>
-</div>
+  <div class="btn-group">
+    <a href="#contact" class="btn">Contact Me</a>
+    <a href="resume.pdf" class="btn secondary" onclick="animateDownload(this)" download>
+      Download Resume
+    </a>
+  </div>
 </section>
 
 <!-- ABOUT -->
 
 <section id="about">
-<h2>About Me</h2>
-<div class="about">
-Data Science and AI graduate with hands-on experience in data analysis, exploratory data analysis (EDA), and machine learning 
-to transform raw data into actionable insights. Strong foundation in SQL, Python, and data visualization with exposure to 
-cloud-based data systems for scalable analytics. Proven ability to handle from data collection and preprocessing to modeling, 
-reporting, and deployment to support business decision-making.
-</div>
+  <h2>About Me</h2>
+  <div class="about">
+    Data Science and AI graduate with hands-on experience in data analysis, exploratory data analysis (EDA), and machine learning 
+    to transform raw data into actionable insights. Strong foundation in SQL, Python, and data visualization with exposure to 
+    cloud-based data systems for scalable analytics. Proven ability to handle from data collection and preprocessing to modeling, 
+    reporting, and deployment to support business decision-making.
+  </div>
 </section>
 
 <!-- SKILLS -->
 
 <section id="skills">
-<h2>Skills</h2>
+  <h2>Skills</h2>
 
-<div class="grid">
-<div class="card">Python</div>
-<div class="card">Machine Learning</div>
-<div class="card">Deep Learning</div>
-<div class="card">SQL</div>
-<div class="card">Generative AI</div>
-<div class="card">RAG Systems</div>
-<div class="card">Streamlit</div>
-<div class="card">Data Visualization</div>
-</div>
+  <div class="grid">
+    <div class="card">Python</div>
+    <div class="card">Machine Learning</div>
+    <div class="card">Deep Learning</div>
+    <div class="card">SQL</div>
+    <div class="card">Generative AI</div>
+    <div class="card">RAG Systems</div>
+    <div class="card">Streamlit</div>
+    <div class="card">Data Visualization</div>
+  </div>
 </section>
 
 <!-- EXPERIENCE -->
 
 <section id="experience">
-<h2>Professional Experience</h2>
+  <h2>Professional Experience</h2>
 
-<div class="grid">
+  <div class="grid">
 
-<div class="card">
-<h3>Data Science Intern – GradTwin</h3>
-<p><strong>Dec 2025 – Feb 2026</strong></p>
-<ul style="margin-top:15px;line-height:1.7;">
-<li>Conducted in-depth EDA on customer and sales datasets to uncover trends and data quality issues.</li>
-<li>Designed interactive Power BI dashboards for sales and customer insights.</li>
-<li>Performed data preprocessing and feature engineering using Python and SQL.</li>
-<li>Built churn prediction models using Logistic Regression.</li>
-</ul>
-</div>
+    <div class="card">
+      <h3>Data Science Intern – GradTwin</h3>
+      <p><strong>Dec 2025 – Feb 2026</strong></p>
+      <ul style="margin-top:15px;line-height:1.7;">
+        <li>Conducted in-depth EDA on customer and sales datasets to uncover trends and data quality issues.</li>
+        <li>Designed interactive Power BI dashboards for sales and customer insights.</li>
+        <li>Performed data preprocessing and feature engineering using Python and SQL.</li>
+        <li>Built churn prediction models using Logistic Regression.</li>
+      </ul>
+    </div>
 
-<div class="card">
-<h3>Artificial Intelligence Intern – ReTech Solutions Limited</h3>
-<p><strong>Dec 2023 – Dec 2023</strong></p>
-<ul style="margin-top:15px;line-height:1.7;">
-<li>Developed and optimized ML and deep learning models.</li>
-<li>Implemented NLP pipelines including semantic search systems.</li>
-<li>Assisted in deployment of AI models into applications.</li>
-</ul>
-</div>
+    <div class="card">
+      <h3>Artificial Intelligence Intern – ReTech Solutions Limited</h3>
+      <p><strong>Dec 2023 – Dec 2023</strong></p>
+      <ul style="margin-top:15px;line-height:1.7;">
+        <li>Developed and optimized ML and deep learning models.</li>
+        <li>Implemented NLP pipelines including semantic search systems.</li>
+        <li>Assisted in deployment of AI models into applications.</li>
+      </ul>
+    </div>
 
-</div>
+  </div>
 </section>
 
 <!-- PROJECTS -->
 
 <section id="projects">
-<h2>Projects</h2>
+  <h2>Projects</h2>
 
-<div class="grid">
+  <div class="grid">
 
-<div class="card">
-<h3>Conversational AI using RAG</h3>
-<p>LLM-powered intelligent retrieval system.</p>
-<div class="badges">
-<span class="badge">Python</span>
-<span class="badge">LLM</span>
-<span class="badge">ChromaDB</span>
-<span class="badge">RAG</span>
-</div>
-</div>
+    <div class="card">
+      <h3>Conversational AI using RAG</h3>
+      <p>LLM-powered intelligent retrieval system.</p>
+      <div class="badges">
+        <span class="badge">Python</span>
+        <span class="badge">LLM</span>
+        <span class="badge">ChromaDB</span>
+        <span class="badge">RAG</span>
+      </div>
+    </div>
 
-<div class="card">
-<h3>Agentic AI for Process Mining</h3>
-<p>Multi-agent AI workflow intelligence platform.</p>
-<div class="badges">
-<span class="badge">CrewAI</span>
-<span class="badge">Python</span>
-<span class="badge">LLM</span>
-<span class="badge">Process Mining</span>
-</div>
-</div>
+    <div class="card">
+      <h3>Agentic AI for Process Mining</h3>
+      <p>Multi-agent AI workflow intelligence platform.</p>
+      <div class="badges">
+        <span class="badge">CrewAI</span>
+        <span class="badge">Python</span>
+        <span class="badge">LLM</span>
+        <span class="badge">Process Mining</span>
+      </div>
+    </div>
 
-<div class="card">
-<h3>Churn Prediction System</h3>
-<p>End-to-end ML churn analysis pipeline.</p>
-<div class="badges">
-<span class="badge">Python</span>
-<span class="badge">Scikit-learn</span>
-<span class="badge">EDA</span>
-<span class="badge">Deployment</span>
-</div>
-</div>
+    <div class="card">
+      <h3>Churn Prediction System</h3>
+      <p>End-to-end ML churn analysis pipeline.</p>
+      <div class="badges">
+        <span class="badge">Python</span>
+        <span class="badge">Scikit-learn</span>
+        <span class="badge">EDA</span>
+        <span class="badge">Deployment</span>
+      </div>
+    </div>
 
-</div>
+  </div>
 </section>
 
 <!-- EDUCATION -->
 
 <section id="education">
-<h2>Education</h2>
-<div class="education">
-<p><strong>B.Tech CSE (Data Science & AI)</strong></p>
-<p>Hindustan University (2021 – 2025)</p><br>
+  <h2>Education</h2>
+  <div class="education">
+    <p><strong>B.Tech CSE (Data Science & AI)</strong></p>
+    <p>Hindustan University (2021 – 2025)</p><br>
 
-<p><strong>M.Tech Data Science & AI</strong></p>
-<p>SRM Chennai (2026 – 2028)</p>
-</div>
+    <p><strong>M.Tech Data Science & AI</strong></p>
+    <p>SRM Chennai (2026 – 2028)</p>
+  </div>
 </section>
 
 <!-- CONTACT -->
 
 <section id="contact">
-<h2>Contact</h2>
-<div class="contact">
-<p>Email: sandhip@example.com</p>
+  <h2>Contact</h2>
+  <div class="contact">
+    <p>Email: sandhip@example.com</p>
 
-<div class="socials">
-<a href="https://github.com/sandhipr27" target="_blank">GitHub</a>
-<a href="https://www.linkedin.com/in/sandhip-r-4262a438a/" target="_blank">LinkedIn</a>
-</div>
-</div>
+    <div class="socials">
+      <a href="https://github.com/sandhipr27" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/sandhip-r-4262a438a/" target="_blank">LinkedIn</a>
+    </div>
+  </div>
 </section>
 
 <footer>
-© 2026 Sandhip R | Data Scientist & AI Enthusiast
+  © 2026 Sandhip R | Data Scientist & AI Enthusiast
 </footer>
 
 <script>
-/* Typing */
-
+/* Typing effect */
 const texts=["Data Scientist","AI Enthusiast","GenAI Developer","ML Engineer"];
 let i=0,j=0;
 
 (function type(){
-let current=texts[i%texts.length];
-document.getElementById("typing").textContent=current.slice(0,++j);
-if(j===current.length){setTimeout(()=>{j=0;i++;},1500);}
-setTimeout(type,120);
+  let current=texts[i%texts.length];
+  document.getElementById("typing").textContent=current.slice(0,++j);
+  if(j===current.length){setTimeout(()=>{j=0;i++;},1500);}
+  setTimeout(type,120);
 })();
 
-/* Theme */
-
+/* Theme toggle */
 function toggleTheme(){
-document.body.classList.toggle("light");
+  document.body.classList.toggle("light");
 }
 
-/* Navbar highlight */
-
+/* Navbar highlight on scroll */
 const sections=document.querySelectorAll("section");
 const navlinks=document.querySelectorAll(".navlink");
 
 window.addEventListener("scroll",()=>{
-let current="";
-sections.forEach(sec=>{
-if(window.scrollY>=sec.offsetTop-150){
-current=sec.getAttribute("id");
-}
-});
+  let current="";
+  sections.forEach(sec=>{
+    if(window.scrollY>=sec.offsetTop-150){
+      current=sec.getAttribute("id");
+    }
+  });
 
-navlinks.forEach(a=>{
-a.classList.remove("active");
-if(a.getAttribute("href")==="#"+current){
-a.classList.add("active");
-}
-});
+  navlinks.forEach(a=>{
+    a.classList.remove("active");
+    if(a.getAttribute("href")==="#"+current){
+      a.classList.add("active");
+    }
+  });
 });
 
 /* Download animation */
-
 function animateDownload(btn){
-btn.classList.add("download-animate");
-setTimeout(()=>btn.classList.remove("download-animate"),600);
+  btn.classList.add("download-animate");
+  setTimeout(()=>btn.classList.remove("download-animate"),600);
 }
 </script>
 
