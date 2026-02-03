@@ -229,11 +229,38 @@ h2{
 
 /* SOCIAL */
 
-.socials a{
-  margin:0 15px;
+/* CENTER CONTACT SECTION */
+
+#contact{
+  text-align:center;
+}
+
+.contact-container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:25px;
+}
+
+.socials{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+}
+
+.socials a,
+#contact a{
   color:var(--accent);
   text-decoration:none;
+  font-size:18px;
   font-weight:500;
+}
+
+.socials a:hover,
+#contact a:hover{
+  text-decoration:underline;
+}
+
 }
 
 footer{
@@ -417,19 +444,26 @@ footer{
 
 <!-- CONTACT -->
 
+<!-- CONTACT -->
+
 <section id="contact">
   <h2>Contact</h2>
-  <div class="contact">
-    <p>Email: 
-      <a href="mailto:9sandhip6@gmail.com">9sandhip6@gmail.com</a>
-    </p>
-  </div>
+
+  <div class="contact-container">
+
     <div class="socials">
       <a href="https://github.com/sandhipr27" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/sandhip-r-4262a438a/" target="_blank">LinkedIn</a>
     </div>
+
+    <p>
+      Email: 
+      <a href="mailto:9sandhip6@gmail.com">9sandhip6@gmail.com</a>
+    </p>
+
   </div>
 </section>
+
 
 <footer>
   © 2026 Sandhip R | Data Scientist & AI Enthusiast
